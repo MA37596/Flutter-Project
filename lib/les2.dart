@@ -30,8 +30,8 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(title),
-        //Hier komt straks de body
-      ), 
+        //Hier komt straks een body.
+      ),
     );
   }
 }
