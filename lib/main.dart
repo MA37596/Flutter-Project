@@ -1,20 +1,20 @@
-import 'anime_list.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'splash_screen.dart';
+
 
 void main() {
-  runApp(const MainApp());
+  runApp(SplashScreenApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class SplashScreenApp extends StatelessWidget {
+  const SplashScreenApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: Text("Hello world")),
-        body: Container(child: Center(child: AnimeList())),
-      ),
-    );
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SplashScreen(),
+      );
   }
 }
