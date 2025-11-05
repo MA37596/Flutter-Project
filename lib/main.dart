@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'splash_screen.dart';
-
+import 'package:flutter/services.dart';
+import './screens/home.dart';
 
 void main() {
-  runApp(SplashScreenApp());
+  runApp(const MyApp());
 }
 
-class SplashScreenApp extends StatelessWidget {
-  const SplashScreenApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
-      );
+      title: 'ToDo App',
+      home: Home(),
+    );
   }
 }
